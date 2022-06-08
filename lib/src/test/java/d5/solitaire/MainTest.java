@@ -11,6 +11,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MainTest {
+    
+    String LINE_SEPARATOR = System.lineSeparator(); 
 
     @Test
     public void test初期表示() throws UnsupportedEncodingException {
@@ -24,18 +26,18 @@ public class MainTest {
         } catch (NoSuchElementException e) {
             String actual = byteArrayOutputStream.toString("UTF-8");
             assertEquals(""
-                + "レーン0:♢9\r\n"
-                + "レーン1:★♣K\r\n"
-                + "レーン2:★★♢5\r\n"
-                + "レーン3:★★★♠6\r\n"
-                + "レーン4:★★★★♡6\r\n"
-                + "レーン5:★★★★★♡Q\r\n"
-                + "レーン6:★★★★★★♢2\r\n"
-                + "ゴール♠:-\r\n"
-                + "ゴール♣:-\r\n"
-                + "ゴール♡:-\r\n"
-                + "ゴール♢:-\r\n"
-                + "手札トップ:♣7\r\n"
+                + "レーン0:♢9" + LINE_SEPARATOR
+                + "レーン1:★♣K" + LINE_SEPARATOR
+                + "レーン2:★★♢5" + LINE_SEPARATOR
+                + "レーン3:★★★♠6" + LINE_SEPARATOR
+                + "レーン4:★★★★♡6" + LINE_SEPARATOR
+                + "レーン5:★★★★★♡Q" + LINE_SEPARATOR
+                + "レーン6:★★★★★★♢2" + LINE_SEPARATOR
+                + "ゴール♠:-" + LINE_SEPARATOR
+                + "ゴール♣:-" + LINE_SEPARATOR
+                + "ゴール♡:-" + LINE_SEPARATOR
+                + "ゴール♢:-" + LINE_SEPARATOR
+                + "手札トップ:♣7" + LINE_SEPARATOR
                 + "どうしますか？(操作対象のレーン。手札の場合は7）:", actual);
         }
     }
@@ -52,31 +54,31 @@ public class MainTest {
         } catch (NoSuchElementException e) {
             String actual = byteArrayOutputStream.toString("UTF-8");
             assertEquals(""
-                + "レーン0:♢9\r\n"
-                + "レーン1:★♣K\r\n"
-                + "レーン2:★★♢5\r\n"
-                + "レーン3:★★★♠6\r\n"
-                + "レーン4:★★★★♡6\r\n"
-                + "レーン5:★★★★★♡Q\r\n"
-                + "レーン6:★★★★★★♢2\r\n"
-                + "ゴール♠:-\r\n"
-                + "ゴール♣:-\r\n"
-                + "ゴール♡:-\r\n"
-                + "ゴール♢:-\r\n"
-                + "手札トップ:♣7\r\n"
-                + "どうしますか？(操作対象のレーン。手札の場合は7）:レーン5をどうしますか？(操作対象のレーン。ゴールの場合は7）:★:レーン5からレーン1への移動\r\n"
-                + "レーン0:♢9\r\n"
-                + "レーン1:★♣K♡Q\r\n"
-                + "レーン2:★★♢5\r\n"
-                + "レーン3:★★★♠6\r\n"
-                + "レーン4:★★★★♡6\r\n"
-                + "レーン5:★★★★♣8\r\n"
-                + "レーン6:★★★★★★♢2\r\n"
-                + "ゴール♠:-\r\n"
-                + "ゴール♣:-\r\n"
-                + "ゴール♡:-\r\n"
-                + "ゴール♢:-\r\n"
-                + "手札トップ:♣7\r\n"
+                + "レーン0:♢9" + LINE_SEPARATOR
+                + "レーン1:★♣K" + LINE_SEPARATOR
+                + "レーン2:★★♢5" + LINE_SEPARATOR
+                + "レーン3:★★★♠6" + LINE_SEPARATOR
+                + "レーン4:★★★★♡6" + LINE_SEPARATOR
+                + "レーン5:★★★★★♡Q" + LINE_SEPARATOR
+                + "レーン6:★★★★★★♢2" + LINE_SEPARATOR
+                + "ゴール♠:-" + LINE_SEPARATOR
+                + "ゴール♣:-" + LINE_SEPARATOR
+                + "ゴール♡:-" + LINE_SEPARATOR
+                + "ゴール♢:-" + LINE_SEPARATOR
+                + "手札トップ:♣7" + LINE_SEPARATOR
+                + "どうしますか？(操作対象のレーン。手札の場合は7）:レーン5をどうしますか？(操作対象のレーン。ゴールの場合は7）:★:レーン5からレーン1への移動" + LINE_SEPARATOR
+                + "レーン0:♢9" + LINE_SEPARATOR
+                + "レーン1:★♣K♡Q" + LINE_SEPARATOR
+                + "レーン2:★★♢5" + LINE_SEPARATOR
+                + "レーン3:★★★♠6" + LINE_SEPARATOR
+                + "レーン4:★★★★♡6" + LINE_SEPARATOR
+                + "レーン5:★★★★♣8" + LINE_SEPARATOR
+                + "レーン6:★★★★★★♢2" + LINE_SEPARATOR
+                + "ゴール♠:-" + LINE_SEPARATOR
+                + "ゴール♣:-" + LINE_SEPARATOR
+                + "ゴール♡:-" + LINE_SEPARATOR
+                + "ゴール♢:-" + LINE_SEPARATOR
+                + "手札トップ:♣7" + LINE_SEPARATOR
                 + "どうしますか？(操作対象のレーン。手札の場合は7）:", actual);
         }
     }
@@ -93,173 +95,173 @@ public class MainTest {
         } catch (NoSuchElementException e) {
             String actual = byteArrayOutputStream.toString("UTF-8");
             assertEquals(""
-                + "レーン0:♢9\r\n"
-                + "レーン1:★♣K\r\n"
-                + "レーン2:★★♢5\r\n"
-                + "レーン3:★★★♠6\r\n"
-                + "レーン4:★★★★♡6\r\n"
-                + "レーン5:★★★★★♡Q\r\n"
-                + "レーン6:★★★★★★♢2\r\n"
-                + "ゴール♠:-\r\n"
-                + "ゴール♣:-\r\n"
-                + "ゴール♡:-\r\n"
-                + "ゴール♢:-\r\n"
-                + "手札トップ:♣7\r\n"
-                + "どうしますか？(操作対象のレーン。手札の場合は7）:レーン5をどうしますか？(操作対象のレーン。ゴールの場合は7）:★:レーン5からレーン1への移動\r\n"
-                + "レーン0:♢9\r\n"
-                + "レーン1:★♣K♡Q\r\n"
-                + "レーン2:★★♢5\r\n"
-                + "レーン3:★★★♠6\r\n"
-                + "レーン4:★★★★♡6\r\n"
-                + "レーン5:★★★★♣8\r\n"
-                + "レーン6:★★★★★★♢2\r\n"
-                + "ゴール♠:-\r\n"
-                + "ゴール♣:-\r\n"
-                + "ゴール♡:-\r\n"
-                + "ゴール♢:-\r\n"
-                + "手札トップ:♣7\r\n"
-                + "どうしますか？(操作対象のレーン。手札の場合は7）:レーン5をどうしますか？(操作対象のレーン。ゴールの場合は7）:★:レーン5からレーン0への移動\r\n"
-                + "レーン0:♢9♣8\r\n"
-                + "レーン1:★♣K♡Q\r\n"
-                + "レーン2:★★♢5\r\n"
-                + "レーン3:★★★♠6\r\n"
-                + "レーン4:★★★★♡6\r\n"
-                + "レーン5:★★★♢4\r\n"
-                + "レーン6:★★★★★★♢2\r\n"
-                + "ゴール♠:-\r\n"
-                + "ゴール♣:-\r\n"
-                + "ゴール♡:-\r\n"
-                + "ゴール♢:-\r\n"
-                + "手札トップ:♣7\r\n"
-                + "どうしますか？(操作対象のレーン。手札の場合は7）:レーン2をどうしますか？(操作対象のレーン。ゴールの場合は7）:★:レーン2からレーン3への移動\r\n"
-                + "レーン0:♢9♣8\r\n"
-                + "レーン1:★♣K♡Q\r\n"
-                + "レーン2:★♣3\r\n"
-                + "レーン3:★★★♠6♢5\r\n"
-                + "レーン4:★★★★♡6\r\n"
-                + "レーン5:★★★♢4\r\n"
-                + "レーン6:★★★★★★♢2\r\n"
-                + "ゴール♠:-\r\n"
-                + "ゴール♣:-\r\n"
-                + "ゴール♡:-\r\n"
-                + "ゴール♢:-\r\n"
-                + "手札トップ:♣7\r\n"
-                + "どうしますか？(操作対象のレーン。手札の場合は7）:レーン2をどうしますか？(操作対象のレーン。ゴールの場合は7）:★:レーン2からレーン5への移動\r\n"
-                + "レーン0:♢9♣8\r\n"
-                + "レーン1:★♣K♡Q\r\n"
-                + "レーン2:♡J\r\n"
-                + "レーン3:★★★♠6♢5\r\n"
-                + "レーン4:★★★★♡6\r\n"
-                + "レーン5:★★★♢4♣3\r\n"
-                + "レーン6:★★★★★★♢2\r\n"
-                + "ゴール♠:-\r\n"
-                + "ゴール♣:-\r\n"
-                + "ゴール♡:-\r\n"
-                + "ゴール♢:-\r\n"
-                + "手札トップ:♣7\r\n"
-                + "どうしますか？(操作対象のレーン。手札の場合は7）:レーン6をどうしますか？(操作対象のレーン。ゴールの場合は7）:★:レーン6からレーン5への移動\r\n"
-                + "レーン0:♢9♣8\r\n"
-                + "レーン1:★♣K♡Q\r\n"
-                + "レーン2:♡J\r\n"
-                + "レーン3:★★★♠6♢5\r\n"
-                + "レーン4:★★★★♡6\r\n"
-                + "レーン5:★★★♢4♣3♢2\r\n"
-                + "レーン6:★★★★★♡K\r\n"
-                + "ゴール♠:-\r\n"
-                + "ゴール♣:-\r\n"
-                + "ゴール♡:-\r\n"
-                + "ゴール♢:-\r\n"
-                + "手札トップ:♣7\r\n"
-                + "どうしますか？(操作対象のレーン。手札の場合は7）:手札をどうしますか？(操作対象のレーン。ゴールの場合は7, 繰る場合は8）:★:手札を繰る\r\n"
-                + "レーン0:♢9♣8\r\n"
-                + "レーン1:★♣K♡Q\r\n"
-                + "レーン2:♡J\r\n"
-                + "レーン3:★★★♠6♢5\r\n"
-                + "レーン4:★★★★♡6\r\n"
-                + "レーン5:★★★♢4♣3♢2\r\n"
-                + "レーン6:★★★★★♡K\r\n"
-                + "ゴール♠:-\r\n"
-                + "ゴール♣:-\r\n"
-                + "ゴール♡:-\r\n"
-                + "ゴール♢:-\r\n"
-                + "手札トップ:♣2\r\n"
-                + "どうしますか？(操作対象のレーン。手札の場合は7）:手札をどうしますか？(操作対象のレーン。ゴールの場合は7, 繰る場合は8）:★:手札を繰る\r\n"
-                + "レーン0:♢9♣8\r\n"
-                + "レーン1:★♣K♡Q\r\n"
-                + "レーン2:♡J\r\n"
-                + "レーン3:★★★♠6♢5\r\n"
-                + "レーン4:★★★★♡6\r\n"
-                + "レーン5:★★★♢4♣3♢2\r\n"
-                + "レーン6:★★★★★♡K\r\n"
-                + "ゴール♠:-\r\n"
-                + "ゴール♣:-\r\n"
-                + "ゴール♡:-\r\n"
-                + "ゴール♢:-\r\n"
-                + "手札トップ:♠7\r\n"
-                + "どうしますか？(操作対象のレーン。手札の場合は7）:手札をどうしますか？(操作対象のレーン。ゴールの場合は7, 繰る場合は8）:★:手札を繰る\r\n"
-                + "レーン0:♢9♣8\r\n"
-                + "レーン1:★♣K♡Q\r\n"
-                + "レーン2:♡J\r\n"
-                + "レーン3:★★★♠6♢5\r\n"
-                + "レーン4:★★★★♡6\r\n"
-                + "レーン5:★★★♢4♣3♢2\r\n"
-                + "レーン6:★★★★★♡K\r\n"
-                + "ゴール♠:-\r\n"
-                + "ゴール♣:-\r\n"
-                + "ゴール♡:-\r\n"
-                + "ゴール♢:-\r\n"
-                + "手札トップ:♠9\r\n"
-                + "どうしますか？(操作対象のレーン。手札の場合は7）:手札をどうしますか？(操作対象のレーン。ゴールの場合は7, 繰る場合は8）:★:手札を繰る\r\n"
-                + "レーン0:♢9♣8\r\n"
-                + "レーン1:★♣K♡Q\r\n"
-                + "レーン2:♡J\r\n"
-                + "レーン3:★★★♠6♢5\r\n"
-                + "レーン4:★★★★♡6\r\n"
-                + "レーン5:★★★♢4♣3♢2\r\n"
-                + "レーン6:★★★★★♡K\r\n"
-                + "ゴール♠:-\r\n"
-                + "ゴール♣:-\r\n"
-                + "ゴール♡:-\r\n"
-                + "ゴール♢:-\r\n"
-                + "手札トップ:♡7\r\n"
-                + "どうしますか？(操作対象のレーン。手札の場合は7）:手札をどうしますか？(操作対象のレーン。ゴールの場合は7, 繰る場合は8）:★:手札を繰る\r\n"
-                + "レーン0:♢9♣8\r\n"
-                + "レーン1:★♣K♡Q\r\n"
-                + "レーン2:♡J\r\n"
-                + "レーン3:★★★♠6♢5\r\n"
-                + "レーン4:★★★★♡6\r\n"
-                + "レーン5:★★★♢4♣3♢2\r\n"
-                + "レーン6:★★★★★♡K\r\n"
-                + "ゴール♠:-\r\n"
-                + "ゴール♣:-\r\n"
-                + "ゴール♡:-\r\n"
-                + "ゴール♢:-\r\n"
-                + "手札トップ:♠4\r\n"
-                + "どうしますか？(操作対象のレーン。手札の場合は7）:手札をどうしますか？(操作対象のレーン。ゴールの場合は7, 繰る場合は8）:レーン0:♢9♣8\r\n"
-                + "レーン1:★♣K♡Q\r\n"
-                + "レーン2:♡J\r\n"
-                + "レーン3:★★★♠6♢5♠4\r\n"
-                + "レーン4:★★★★♡6\r\n"
-                + "レーン5:★★★♢4♣3♢2\r\n"
-                + "レーン6:★★★★★♡K\r\n"
-                + "ゴール♠:-\r\n"
-                + "ゴール♣:-\r\n"
-                + "ゴール♡:-\r\n"
-                + "ゴール♢:-\r\n"
-                + "手札トップ:♠A\r\n"
-                + "どうしますか？(操作対象のレーン。手札の場合は7）:手札をどうしますか？(操作対象のレーン。ゴールの場合は7, 繰る場合は8）:★:手札をゴールへ\r\n"
-                + "レーン0:♢9♣8\r\n"
-                + "レーン1:★♣K♡Q\r\n"
-                + "レーン2:♡J\r\n"
-                + "レーン3:★★★♠6♢5♠4\r\n"
-                + "レーン4:★★★★♡6\r\n"
-                + "レーン5:★★★♢4♣3♢2\r\n"
-                + "レーン6:★★★★★♡K\r\n"
-                + "ゴール♠:1\r\n"
-                + "ゴール♣:-\r\n"
-                + "ゴール♡:-\r\n"
-                + "ゴール♢:-\r\n"
-                + "手札トップ:♠5\r\n"
+                + "レーン0:♢9" + LINE_SEPARATOR
+                + "レーン1:★♣K" + LINE_SEPARATOR
+                + "レーン2:★★♢5" + LINE_SEPARATOR
+                + "レーン3:★★★♠6" + LINE_SEPARATOR
+                + "レーン4:★★★★♡6" + LINE_SEPARATOR
+                + "レーン5:★★★★★♡Q" + LINE_SEPARATOR
+                + "レーン6:★★★★★★♢2" + LINE_SEPARATOR
+                + "ゴール♠:-" + LINE_SEPARATOR
+                + "ゴール♣:-" + LINE_SEPARATOR
+                + "ゴール♡:-" + LINE_SEPARATOR
+                + "ゴール♢:-" + LINE_SEPARATOR
+                + "手札トップ:♣7" + LINE_SEPARATOR
+                + "どうしますか？(操作対象のレーン。手札の場合は7）:レーン5をどうしますか？(操作対象のレーン。ゴールの場合は7）:★:レーン5からレーン1への移動" + LINE_SEPARATOR
+                + "レーン0:♢9" + LINE_SEPARATOR
+                + "レーン1:★♣K♡Q" + LINE_SEPARATOR
+                + "レーン2:★★♢5" + LINE_SEPARATOR
+                + "レーン3:★★★♠6" + LINE_SEPARATOR
+                + "レーン4:★★★★♡6" + LINE_SEPARATOR
+                + "レーン5:★★★★♣8" + LINE_SEPARATOR
+                + "レーン6:★★★★★★♢2" + LINE_SEPARATOR
+                + "ゴール♠:-" + LINE_SEPARATOR
+                + "ゴール♣:-" + LINE_SEPARATOR
+                + "ゴール♡:-" + LINE_SEPARATOR
+                + "ゴール♢:-" + LINE_SEPARATOR
+                + "手札トップ:♣7" + LINE_SEPARATOR
+                + "どうしますか？(操作対象のレーン。手札の場合は7）:レーン5をどうしますか？(操作対象のレーン。ゴールの場合は7）:★:レーン5からレーン0への移動" + LINE_SEPARATOR
+                + "レーン0:♢9♣8" + LINE_SEPARATOR
+                + "レーン1:★♣K♡Q" + LINE_SEPARATOR
+                + "レーン2:★★♢5" + LINE_SEPARATOR
+                + "レーン3:★★★♠6" + LINE_SEPARATOR
+                + "レーン4:★★★★♡6" + LINE_SEPARATOR
+                + "レーン5:★★★♢4" + LINE_SEPARATOR
+                + "レーン6:★★★★★★♢2" + LINE_SEPARATOR
+                + "ゴール♠:-" + LINE_SEPARATOR
+                + "ゴール♣:-" + LINE_SEPARATOR
+                + "ゴール♡:-" + LINE_SEPARATOR
+                + "ゴール♢:-" + LINE_SEPARATOR
+                + "手札トップ:♣7" + LINE_SEPARATOR
+                + "どうしますか？(操作対象のレーン。手札の場合は7）:レーン2をどうしますか？(操作対象のレーン。ゴールの場合は7）:★:レーン2からレーン3への移動" + LINE_SEPARATOR
+                + "レーン0:♢9♣8" + LINE_SEPARATOR
+                + "レーン1:★♣K♡Q" + LINE_SEPARATOR
+                + "レーン2:★♣3" + LINE_SEPARATOR
+                + "レーン3:★★★♠6♢5" + LINE_SEPARATOR
+                + "レーン4:★★★★♡6" + LINE_SEPARATOR
+                + "レーン5:★★★♢4" + LINE_SEPARATOR
+                + "レーン6:★★★★★★♢2" + LINE_SEPARATOR
+                + "ゴール♠:-" + LINE_SEPARATOR
+                + "ゴール♣:-" + LINE_SEPARATOR
+                + "ゴール♡:-" + LINE_SEPARATOR
+                + "ゴール♢:-" + LINE_SEPARATOR
+                + "手札トップ:♣7" + LINE_SEPARATOR
+                + "どうしますか？(操作対象のレーン。手札の場合は7）:レーン2をどうしますか？(操作対象のレーン。ゴールの場合は7）:★:レーン2からレーン5への移動" + LINE_SEPARATOR
+                + "レーン0:♢9♣8" + LINE_SEPARATOR
+                + "レーン1:★♣K♡Q" + LINE_SEPARATOR
+                + "レーン2:♡J" + LINE_SEPARATOR
+                + "レーン3:★★★♠6♢5" + LINE_SEPARATOR
+                + "レーン4:★★★★♡6" + LINE_SEPARATOR
+                + "レーン5:★★★♢4♣3" + LINE_SEPARATOR
+                + "レーン6:★★★★★★♢2" + LINE_SEPARATOR
+                + "ゴール♠:-" + LINE_SEPARATOR
+                + "ゴール♣:-" + LINE_SEPARATOR
+                + "ゴール♡:-" + LINE_SEPARATOR
+                + "ゴール♢:-" + LINE_SEPARATOR
+                + "手札トップ:♣7" + LINE_SEPARATOR
+                + "どうしますか？(操作対象のレーン。手札の場合は7）:レーン6をどうしますか？(操作対象のレーン。ゴールの場合は7）:★:レーン6からレーン5への移動" + LINE_SEPARATOR
+                + "レーン0:♢9♣8" + LINE_SEPARATOR
+                + "レーン1:★♣K♡Q" + LINE_SEPARATOR
+                + "レーン2:♡J" + LINE_SEPARATOR
+                + "レーン3:★★★♠6♢5" + LINE_SEPARATOR
+                + "レーン4:★★★★♡6" + LINE_SEPARATOR
+                + "レーン5:★★★♢4♣3♢2" + LINE_SEPARATOR
+                + "レーン6:★★★★★♡K" + LINE_SEPARATOR
+                + "ゴール♠:-" + LINE_SEPARATOR
+                + "ゴール♣:-" + LINE_SEPARATOR
+                + "ゴール♡:-" + LINE_SEPARATOR
+                + "ゴール♢:-" + LINE_SEPARATOR
+                + "手札トップ:♣7" + LINE_SEPARATOR
+                + "どうしますか？(操作対象のレーン。手札の場合は7）:手札をどうしますか？(操作対象のレーン。ゴールの場合は7, 繰る場合は8）:★:手札を繰る" + LINE_SEPARATOR
+                + "レーン0:♢9♣8" + LINE_SEPARATOR
+                + "レーン1:★♣K♡Q" + LINE_SEPARATOR
+                + "レーン2:♡J" + LINE_SEPARATOR
+                + "レーン3:★★★♠6♢5" + LINE_SEPARATOR
+                + "レーン4:★★★★♡6" + LINE_SEPARATOR
+                + "レーン5:★★★♢4♣3♢2" + LINE_SEPARATOR
+                + "レーン6:★★★★★♡K" + LINE_SEPARATOR
+                + "ゴール♠:-" + LINE_SEPARATOR
+                + "ゴール♣:-" + LINE_SEPARATOR
+                + "ゴール♡:-" + LINE_SEPARATOR
+                + "ゴール♢:-" + LINE_SEPARATOR
+                + "手札トップ:♣2" + LINE_SEPARATOR
+                + "どうしますか？(操作対象のレーン。手札の場合は7）:手札をどうしますか？(操作対象のレーン。ゴールの場合は7, 繰る場合は8）:★:手札を繰る" + LINE_SEPARATOR
+                + "レーン0:♢9♣8" + LINE_SEPARATOR
+                + "レーン1:★♣K♡Q" + LINE_SEPARATOR
+                + "レーン2:♡J" + LINE_SEPARATOR
+                + "レーン3:★★★♠6♢5" + LINE_SEPARATOR
+                + "レーン4:★★★★♡6" + LINE_SEPARATOR
+                + "レーン5:★★★♢4♣3♢2" + LINE_SEPARATOR
+                + "レーン6:★★★★★♡K" + LINE_SEPARATOR
+                + "ゴール♠:-" + LINE_SEPARATOR
+                + "ゴール♣:-" + LINE_SEPARATOR
+                + "ゴール♡:-" + LINE_SEPARATOR
+                + "ゴール♢:-" + LINE_SEPARATOR
+                + "手札トップ:♠7" + LINE_SEPARATOR
+                + "どうしますか？(操作対象のレーン。手札の場合は7）:手札をどうしますか？(操作対象のレーン。ゴールの場合は7, 繰る場合は8）:★:手札を繰る" + LINE_SEPARATOR
+                + "レーン0:♢9♣8" + LINE_SEPARATOR
+                + "レーン1:★♣K♡Q" + LINE_SEPARATOR
+                + "レーン2:♡J" + LINE_SEPARATOR
+                + "レーン3:★★★♠6♢5" + LINE_SEPARATOR
+                + "レーン4:★★★★♡6" + LINE_SEPARATOR
+                + "レーン5:★★★♢4♣3♢2" + LINE_SEPARATOR
+                + "レーン6:★★★★★♡K" + LINE_SEPARATOR
+                + "ゴール♠:-" + LINE_SEPARATOR
+                + "ゴール♣:-" + LINE_SEPARATOR
+                + "ゴール♡:-" + LINE_SEPARATOR
+                + "ゴール♢:-" + LINE_SEPARATOR
+                + "手札トップ:♠9" + LINE_SEPARATOR
+                + "どうしますか？(操作対象のレーン。手札の場合は7）:手札をどうしますか？(操作対象のレーン。ゴールの場合は7, 繰る場合は8）:★:手札を繰る" + LINE_SEPARATOR
+                + "レーン0:♢9♣8" + LINE_SEPARATOR
+                + "レーン1:★♣K♡Q" + LINE_SEPARATOR
+                + "レーン2:♡J" + LINE_SEPARATOR
+                + "レーン3:★★★♠6♢5" + LINE_SEPARATOR
+                + "レーン4:★★★★♡6" + LINE_SEPARATOR
+                + "レーン5:★★★♢4♣3♢2" + LINE_SEPARATOR
+                + "レーン6:★★★★★♡K" + LINE_SEPARATOR
+                + "ゴール♠:-" + LINE_SEPARATOR
+                + "ゴール♣:-" + LINE_SEPARATOR
+                + "ゴール♡:-" + LINE_SEPARATOR
+                + "ゴール♢:-" + LINE_SEPARATOR
+                + "手札トップ:♡7" + LINE_SEPARATOR
+                + "どうしますか？(操作対象のレーン。手札の場合は7）:手札をどうしますか？(操作対象のレーン。ゴールの場合は7, 繰る場合は8）:★:手札を繰る" + LINE_SEPARATOR
+                + "レーン0:♢9♣8" + LINE_SEPARATOR
+                + "レーン1:★♣K♡Q" + LINE_SEPARATOR
+                + "レーン2:♡J" + LINE_SEPARATOR
+                + "レーン3:★★★♠6♢5" + LINE_SEPARATOR
+                + "レーン4:★★★★♡6" + LINE_SEPARATOR
+                + "レーン5:★★★♢4♣3♢2" + LINE_SEPARATOR
+                + "レーン6:★★★★★♡K" + LINE_SEPARATOR
+                + "ゴール♠:-" + LINE_SEPARATOR
+                + "ゴール♣:-" + LINE_SEPARATOR
+                + "ゴール♡:-" + LINE_SEPARATOR
+                + "ゴール♢:-" + LINE_SEPARATOR
+                + "手札トップ:♠4" + LINE_SEPARATOR
+                + "どうしますか？(操作対象のレーン。手札の場合は7）:手札をどうしますか？(操作対象のレーン。ゴールの場合は7, 繰る場合は8）:レーン0:♢9♣8" + LINE_SEPARATOR
+                + "レーン1:★♣K♡Q" + LINE_SEPARATOR
+                + "レーン2:♡J" + LINE_SEPARATOR
+                + "レーン3:★★★♠6♢5♠4" + LINE_SEPARATOR
+                + "レーン4:★★★★♡6" + LINE_SEPARATOR
+                + "レーン5:★★★♢4♣3♢2" + LINE_SEPARATOR
+                + "レーン6:★★★★★♡K" + LINE_SEPARATOR
+                + "ゴール♠:-" + LINE_SEPARATOR
+                + "ゴール♣:-" + LINE_SEPARATOR
+                + "ゴール♡:-" + LINE_SEPARATOR
+                + "ゴール♢:-" + LINE_SEPARATOR
+                + "手札トップ:♠A" + LINE_SEPARATOR
+                + "どうしますか？(操作対象のレーン。手札の場合は7）:手札をどうしますか？(操作対象のレーン。ゴールの場合は7, 繰る場合は8）:★:手札をゴールへ" + LINE_SEPARATOR
+                + "レーン0:♢9♣8" + LINE_SEPARATOR
+                + "レーン1:★♣K♡Q" + LINE_SEPARATOR
+                + "レーン2:♡J" + LINE_SEPARATOR
+                + "レーン3:★★★♠6♢5♠4" + LINE_SEPARATOR
+                + "レーン4:★★★★♡6" + LINE_SEPARATOR
+                + "レーン5:★★★♢4♣3♢2" + LINE_SEPARATOR
+                + "レーン6:★★★★★♡K" + LINE_SEPARATOR
+                + "ゴール♠:1" + LINE_SEPARATOR
+                + "ゴール♣:-" + LINE_SEPARATOR
+                + "ゴール♡:-" + LINE_SEPARATOR
+                + "ゴール♢:-" + LINE_SEPARATOR
+                + "手札トップ:♠5" + LINE_SEPARATOR
                 + "どうしますか？(操作対象のレーン。手札の場合は7）:", actual);
         }
     }
