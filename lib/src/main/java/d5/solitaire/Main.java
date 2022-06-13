@@ -205,6 +205,7 @@ public class Main {
 						else {
 							System.out.println("★:手札を繰る");
 							index++;
+							// 山札のインデックスが山札の枚数を超えたらまた山札の0枚目から開始
 							if (index >= set.size()) {
 								index = 0;
 							}
