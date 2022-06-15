@@ -1,13 +1,13 @@
 <mxfile host="65bd71144e">
     <diagram id="ShvGQj9uCo0mxuRnpL4O" name="ページ1">
-        <mxGraphModel dx="741" dy="539" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1264" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="2" value="Card" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
                     <mxGeometry x="235" y="545" width="160" height="104" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="+ number: Integer&#10;+ suit: Suit" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
+                <mxCell id="3" value="+ number: CardNumber&#10;+ suit: Suit" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
                     <mxGeometry y="26" width="160" height="44" as="geometry"/>
                 </mxCell>
                 <mxCell id="4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="2" vertex="1">
@@ -100,11 +100,11 @@
                 <mxCell id="34" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="31" vertex="1">
                     <mxGeometry y="78" width="160" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="35" value="初期化処理例&lt;br&gt;①52枚のCardをもつDeck作成→DeckからField作成&lt;br&gt;②トランプクラスからDeckとFieldをそれぞれ作成&lt;br&gt;&lt;br&gt;①だと現在めくっているカードの管理と初期化の処理でライフサイクル長すぎる気がする。&lt;br&gt;&lt;br&gt;②だとそもそも実装どうするのか。手順的にフィールド→山札の順で作成したいけど、それを制御できない。複数戻り値で返したいけど、それができないからメソッドは分かれそう。&lt;br&gt;→DeckとFieldをもつSolitaireFactoryがいて、newのタイミングでDeckとFieldを作成するようにすればいけるのでは？" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=0;" parent="1" vertex="1">
+                <mxCell id="35" value="初期化処理例&lt;br&gt;①52枚のCardをもつDeck作成→DeckからField作成&lt;br&gt;②トランプクラスからDeckとFieldをそれぞれ作成&lt;br&gt;&lt;br&gt;①だと現在めくっているカードの管理と初期化の処理でライフサイクル長すぎる気がする。&lt;br&gt;&lt;br&gt;②だとそもそも実装どうするのか。手順的にフィールド→山札の順で作成したいけど、それを制御できない。複数戻り値で返したいけど、それができないからメソッドは分かれそう。&lt;br&gt;→DeckとFieldをもつSolitaireFactoryがいて、newのタイミングでDeckとFieldを作成するようにすればいけるのでは？" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=0;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;opacity=50;" parent="1" vertex="1">
                     <mxGeometry x="447" y="10" width="380" height="180" as="geometry"/>
                 </mxCell>
-                <mxCell id="36" value="全体的にイミュータブルな設計・実装がむずそう。&lt;br&gt;DeckとかFieldCardとか状態持ちたくなる。" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=0;" parent="1" vertex="1">
-                    <mxGeometry x="40" y="900" width="290" height="60" as="geometry"/>
+                <mxCell id="36" value="全体的にイミュータブルな設計・実装がむずそう。&lt;br&gt;DeckとかFieldCardとか状態持ちたくなる。" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=0;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;opacity=50;" parent="1" vertex="1">
+                    <mxGeometry x="35" y="1010" width="290" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="40" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="16" target="3" edge="1">
                     <mxGeometry x="-0.0611" width="160" relative="1" as="geometry">
@@ -132,10 +132,10 @@
                         <mxPoint x="615" y="842" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="45" value="クラス図の線の種類よくわからない問題&lt;br&gt;関連と集約とコンポジットどう使い分ける&lt;br&gt;LineとFieldとFieldCardはそれぞれ集約だと思われる。&lt;br&gt;DeckとCardは集約？関連？" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=0;" parent="1" vertex="1">
-                    <mxGeometry x="40" y="990" width="320" height="60" as="geometry"/>
+                <mxCell id="45" value="クラス図の線の種類よくわからない問題&lt;br&gt;関連と集約とコンポジットどう使い分ける&lt;br&gt;LineとFieldとFieldCardはそれぞれ集約だと思われる。&lt;br&gt;DeckとCardは集約？関連？" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=0;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;opacity=50;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="1000" width="320" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="46" value="" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" target="11" edge="1" source="15">
+                <mxCell id="46" value="" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="15" target="11" edge="1">
                     <mxGeometry width="160" relative="1" as="geometry">
                         <mxPoint x="565" y="644" as="sourcePoint"/>
                         <mxPoint x="568" y="702" as="targetPoint"/>
@@ -151,14 +151,14 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="48" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" target="24" edge="1" source="3">
+                <mxCell id="48" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="3" target="24" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="314.71" y="649" as="sourcePoint"/>
                         <mxPoint x="314.71" y="708" as="targetPoint"/>
                         <Array as="points"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="49" value="" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.436;entryY=1.057;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1" target="30" source="23">
+                <mxCell id="49" value="" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.436;entryY=1.057;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="23" target="30" edge="1">
                     <mxGeometry width="160" relative="1" as="geometry">
                         <mxPoint x="124.66000000000014" y="704.998" as="sourcePoint"/>
                         <mxPoint x="125.12" y="771" as="targetPoint"/>
@@ -176,16 +176,16 @@
                 <mxCell id="53" value="+ static NewGame(): Solitaire&#10;+ (static LoadGame(): Solitaire)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="50" vertex="1">
                     <mxGeometry y="88" width="185" height="44" as="geometry"/>
                 </mxCell>
-                <mxCell id="54" value="レーンの持つカードの裏表の状態は1枚1枚のカードが持つべきか&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=0;" parent="1" vertex="1">
+                <mxCell id="54" value="レーンの持つカードの裏表の状態は1枚1枚のカードが持つべきか&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=0;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;opacity=50;" parent="1" vertex="1">
                     <mxGeometry x="414" y="900" width="356" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="57" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="50">
+                <mxCell id="57" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" target="50" edge="1">
                     <mxGeometry width="160" relative="1" as="geometry">
                         <mxPoint x="315" y="379" as="sourcePoint"/>
                         <mxPoint x="450" y="249" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="58" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="27" target="51">
+                <mxCell id="58" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="27" target="51" edge="1">
                     <mxGeometry width="160" relative="1" as="geometry">
                         <mxPoint x="325" y="389" as="sourcePoint"/>
                         <mxPoint x="325" y="313" as="targetPoint"/>
@@ -194,7 +194,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="59" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="51">
+                <mxCell id="59" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="51" edge="1">
                     <mxGeometry width="160" relative="1" as="geometry">
                         <mxPoint x="560" y="389" as="sourcePoint"/>
                         <mxPoint x="447" y="259" as="targetPoint"/>
@@ -203,8 +203,34 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="60" value="Solitaireクラスが強すぎないか....??" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=0;" vertex="1" parent="1">
+                <mxCell id="60" value="Solitaireクラスが強すぎないか....??&lt;br&gt;このままだと業務ロジックがすべてSolitaireクラスに集中しそう" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=0;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;opacity=50;" parent="1" vertex="1">
                     <mxGeometry x="15" y="20" width="200" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="CardNumber" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="732" width="160" height="104" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="+ value: Integer" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="61">
+                    <mxGeometry y="26" width="160" height="44" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="61">
+                    <mxGeometry y="70" width="160" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="61">
+                    <mxGeometry y="78" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;rounded=0;" edge="1" parent="1" source="61">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="325" y="742" as="sourcePoint"/>
+                        <mxPoint x="280" y="649" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="120" y="680"/>
+                            <mxPoint x="280" y="680"/>
+                            <mxPoint x="280" y="649"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="66" value="値オブジェクトの是非&lt;br&gt;ネストが深くなると、newするときにnew~(new~...)と続いてめんどくさい&lt;br&gt;結局値オブジェクトでやる処理って、それを持つオブジェクトがやっても違和感ないことが多い" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=0;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;opacity=50;" vertex="1" parent="1">
+                    <mxGeometry x="35" y="890" width="290" height="100" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
