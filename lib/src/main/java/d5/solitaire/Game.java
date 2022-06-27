@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
+
 import io.vavr.Tuple2;
 
 public class Game {
@@ -256,6 +258,6 @@ public class Game {
     }
     
     private static final <T> List<List<T>> deepCopy(List<List<T>> list) {
-        return new ArrayList<>(list.stream().map(element -> new ArrayList<>(element)).toList());
+        return new ArrayList<>(list.stream().map(element -> new ArrayList<>(element)).collect(Collectors.toList()));
     }
 }
